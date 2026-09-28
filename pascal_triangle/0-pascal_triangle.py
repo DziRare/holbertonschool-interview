@@ -4,24 +4,11 @@
 
 def pascal_triangle(n):
     """Pascals Triangle Function"""
-    if n == 0:
-        return []
+    triangle = []
 
-    triangle = [[1]]
-    if n == 1:
-        return triangle
-    triangle.append([1, 1])
-    if n == 2:
-        return triangle
-
-    for outer_index in range(1, n - 1):
-        row = [1]
-        prev_row = triangle[outer_index]
-
-        for inner_index in range(0, len(prev_row) - 1):
-            row.append(prev_row[inner_index] + prev_row[inner_index + 1])
-
-        row.append(1)
+    for i in range(n):
+        row = [1] * (i + 1)
+        for j in range(1, i):
+            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
         triangle.append(row)
-
     return triangle
