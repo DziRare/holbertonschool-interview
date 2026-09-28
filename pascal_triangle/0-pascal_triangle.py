@@ -4,6 +4,9 @@
 
 def pascal_triangle(n):
     """Pascals Triangle Function"""
+    if n == 0:
+        return []
+    
     triangle = [[1]]
     if n == 1:
         return triangle
