@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Pascals Triangle Problem"""
 
 
 def pascal_triangle(n):
+    """Pascals Triangle Function"""
     triangle = [[1]]
     if n == 1:
         return triangle
