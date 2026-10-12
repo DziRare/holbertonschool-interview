@@ -7,7 +7,7 @@ def canUnlockAll(boxes):
     aquired_keys = boxes[0]
     visited_boxes = {0}
 
-    while aquired_keys:
+    while len(aquired_keys) > 0:
         next_box = aquired_keys.pop()
         if next_box >= len(boxes):
             continue
