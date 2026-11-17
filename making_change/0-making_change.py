@@ -1,8 +1,18 @@
 #!/usr/bin/python3
+"""
+Main file for runing mak change
+"""
+
 def makeChange(coins, total):
+    """
+    Main function for running make change
+    """
     previous_amounts = {}
 
     def coinChangeHelper(coins, amount, previous_amounts):
+        """
+        Helper function for running make change
+        """
         if amount == 0:
             return 0
         if amount in previous_amounts:
