@@ -29,6 +29,7 @@ def makeChange(coins, total):
             previous_amounts[amount] = min(counts)
             return min(counts)
         else:
+            previous_amounts[amount] = -1
             return -1
 
     return coinChangeHelper(coins, total, previous_amounts)
